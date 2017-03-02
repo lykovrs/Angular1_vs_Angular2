@@ -53,10 +53,10 @@ angular.module('angular1CalendarApp')
     $scope.render = function () {
         this.days = [];
         this.hours = [];
-        for (var i = 1; i < this.cells; i++) {
+        for (var i = 1; i <= this.cells; i++) {
             this.days.push("Oct " + i);
         }
-        for (var j = 0; j < this.colls; j++) {
+        for (var j = 0; j <= this.colls; j++) {
             this.hours.push(j);
         }
     };

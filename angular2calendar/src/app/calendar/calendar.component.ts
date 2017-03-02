@@ -31,10 +31,10 @@ export class CalendarComponent {
     this.days = [];
     this.hours = [];
 
-    for (let i = 1; i < this.cells; i++) {
+    for (let i = 1; i <= this.cells; i++) {
       this.days.push("Oct " + i)
     }
-    for (let i = 0; i < this.colls; i++) {
+    for (let i = 0; i <= this.colls; i++) {
       this.hours.push(i)
     }
   }

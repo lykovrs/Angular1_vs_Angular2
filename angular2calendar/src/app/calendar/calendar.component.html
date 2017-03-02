@@ -1,9 +1,9 @@
 <div class="calendar">
   <p>
     <label for="colls">Colls</label>
-    <input id="colls" type="text" [(ngModel)]="colls">
+    <input id="colls" type="text" [(ngModel)]="cells">
     <label for="cells">Cells</label>
-    <input id="cells" type="text" [(ngModel)]="cells">
+    <input id="cells" type="text" [(ngModel)]="colls">
     <button class="btn" (click)="loadData()">Load table</button>
   </p>
   <table *ngIf="isLoaded">

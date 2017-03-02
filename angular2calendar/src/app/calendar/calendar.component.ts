@@ -1,14 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../store.service';
 
-interface IDay {
-
-}
-
-interface IHour {
-
-}
-
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',

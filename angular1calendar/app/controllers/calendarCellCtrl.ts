@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name angular1CalendarApp.controller:calendarcontrollerCtrl

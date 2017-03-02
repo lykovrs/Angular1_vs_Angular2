@@ -18,3 +18,4 @@ angular.module('angular1CalendarApp')
       }
     };
   });
+ 

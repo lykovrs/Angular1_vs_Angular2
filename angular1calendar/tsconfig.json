@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "system",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "app/tsc.js",
+        "sourceMap": false
+    },
+    "include": [
+        "node_modules/angular/angular.ts",
+        "node_modules/angular-route/angular-route.ts",
+        "app/app.ts",
+        "app/directives/calendar.ts",
+        "app/directives/calendarcell.ts",
+        "app/controllers/calendarCtrl.ts",
+        "app/controllers/calendarCellCtrl.ts"
+    ],
+    "exclude": [
+        
+    ]
+}

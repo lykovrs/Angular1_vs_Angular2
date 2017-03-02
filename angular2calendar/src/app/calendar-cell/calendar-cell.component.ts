@@ -1,6 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { StoreService } from '../store.service';
 
+interface IStatus {
+  isSearching: boolean;
+  searchResults: {
+    options: number;
+  }
+}
+
 @Component({
   selector: 'calendar-cell',
   templateUrl: './calendar-cell.component.html',
@@ -8,17 +15,14 @@ import { StoreService } from '../store.service';
 })
 export class CalendarCellComponent {
 
-
-
-  private isPure:boolean = true;
-  private status = {
+  private isPure: boolean = true;
+  private status: IStatus = {
     isSearching: false,
     searchResults: {
       options: null
     }
   };
-  private isSearching:boolean = false;
-
+  private isSearching: boolean = false;
 
   constructor(private store: StoreService) {
     this.store.addCell(this);
@@ -58,6 +62,6 @@ export class CalendarCellComponent {
 
 }
 
-var randomMillis = function() {
+var randomMillis = function () {
   return Math.floor(Math.random() * 500);
 }

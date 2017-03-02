@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../store.service';
 
+interface IDay {
+
+}
+
+interface IHour {
+
+}
+
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
@@ -11,29 +19,40 @@ export class CalendarComponent implements OnInit {
   public hours = [];
   public isLoaded: boolean = false;
 
+  private cells = 15;
+  private colls = 24;
 
-  constructor(private store: StoreService) {
-    for(let i = 1; i < 32; i++) {
+
+  renderTable(): void {
+
+    this.days = [];
+    this.hours = [];
+
+    for (let i = 1; i < this.cells; i++) {
       this.days.push("Oct " + i)
     }
-    for(let i = 0; i < 24; i++) {
-        this.hours.push(i)
+    for (let i = 0; i < this.colls; i++) {
+      this.hours.push(i)
     }
+  }
+
+  constructor(private store: StoreService) {
 
   }
 
 
-  load() {
+  loadData(): void {
     this.isLoaded = true;
+    this.renderTable()
   }
 
 
-  searchAll() {
-    this.store.searchAllCells();
-  }
+  // searchAll() {
+  //   this.store.searchAllCells();
+  // }
 
 
-  dayHeaderClicked() {
+  dayHeaderClicked(): void {
     alert('dayHeaderClicked()');
   }
 

@@ -56,8 +56,14 @@
 </style>
 
 <div class="calendar" ng-init="init()">
-  <button class="btn" ng-if="!isLoaded" ng-click="load()">Load</button>
-  <button class="btn" ng-if="isLoaded" ng-click="searchAll()">Search Whole Month</button>
+  <p>
+    <label for="colls">Colls</label>
+    <input id="colls" type="text" ng-model="colls">
+    <label for="cells">Cells</label>
+    <input id="cells" type="text" ng-model="cells">
+    <button class="btn" ng-click="loadData()">Load table</button>
+  </p>  
+ 
   <table ng-if="isLoaded">
     <tr>
       <th ng-repeat="day in days" class="day-header" ng-click="dayHeaderClicked(day)">

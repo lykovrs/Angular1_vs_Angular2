@@ -7,10 +7,10 @@
  * # calendar
  */
 angular.module('angular1CalendarApp')
-  .directive('calendar', function() {
+  .directive('calendar', function () {
     return {
-      restrict:'E',
+      restrict: 'E',
       templateUrl: 'app/directives/calendar.html',
-      controller:'calendarCtrl'
+      controller: 'calendarCtrl'
     };
   });

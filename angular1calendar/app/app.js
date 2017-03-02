@@ -12,7 +12,7 @@ angular
   .module('angular1CalendarApp', [
     'ngRoute'
   ])
-  .config(function($routeProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .otherwise({
         redirectTo: '/'

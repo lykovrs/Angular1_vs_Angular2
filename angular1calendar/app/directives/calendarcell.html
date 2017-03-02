@@ -4,25 +4,28 @@
     font-size: 10px;
     padding-top: 6px;
   }
+
   .goodresults {
     color: #090;
     background: #efffef;
   }
 
+
   .result-label {
     font-size: 8px;
   }
+
 
   .weakresults {
     color: orange;
     background: #ffffef;
   }
 
+
   .badresults {
     color: red;
     background: #ffefef;
   }
-
 </style>
 
 <div ng-click="cellClicked(day,hour)" ng-class="{goodresults:status.searchResults.options > 3,weakresults:status.searchResults.options >= 1 && status.searchResults.options <= 3,badresults:status.searchResults.options == 0,searching:status.isSearching}">

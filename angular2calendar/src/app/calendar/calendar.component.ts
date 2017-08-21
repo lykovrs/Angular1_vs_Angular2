@@ -17,8 +17,8 @@ export class CalendarComponent {
   public hours: number[] = [];
   public isLoaded: boolean = false;
 
-  private cells = 15;
-  private colls = 24;
+  public cells = 15;
+  public colls = 24;
 
   /**
    * add colls and rows in table

@@ -16,7 +16,7 @@ interface IStatus {
 export class CalendarCellComponent {
 
   private isPure: boolean = true;
-  private status: IStatus = {
+  public status: IStatus = {
     isSearching: false,
     searchResults: {
       options: null
